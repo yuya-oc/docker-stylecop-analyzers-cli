@@ -1,7 +1,7 @@
 FROM alpine:3 AS downloader
 
-# .NET Core Runtime
-RUN wget https://download.visualstudio.microsoft.com/download/pr/48c55817-a638-4efa-b01a-c6e109bebe6c/3ef6df9794ad3954340317e50edf0e0b/aspnetcore-runtime-2.1.16-linux-musl-x64.tar.gz -O /tmp/dotnet.tar.gz
+# .NET Core SDK
+RUN wget https://download.visualstudio.microsoft.com/download/pr/4546f2c5-3ec8-4d0d-a47d-ba44b58a2a3f/4b5319fcb0ec675d3a05cdc4d6c65c80/dotnet-sdk-2.1.804-linux-musl-x64.tar.gz -O /tmp/dotnet.tar.gz
 RUN mkdir -p /opt/dotnet
 RUN tar xvf /tmp/dotnet.tar.gz -C /opt/dotnet
 
